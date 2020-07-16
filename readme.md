@@ -13,3 +13,5 @@ npm run serve
 
 localhost:8081/
 
+npm run build
+
