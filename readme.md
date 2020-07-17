@@ -11,6 +11,8 @@ cd frontend
 
 npm run serve
 
+npm run serve -- --port 8081
+
 localhost:8081/
 
 npm run build
