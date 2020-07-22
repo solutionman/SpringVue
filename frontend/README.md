@@ -1,24 +1,15 @@
 # frontend
 
-## Project setup
-```
+``` bash
+# установка зависимостей
 npm install
-```
 
-### Compiles and hot-reloads for development
-```
+# стартовать на localhost:8081
 npm run serve
-```
 
-### Compiles and minifies for production
-```
+# стартовать в продакшен
 npm run build
-```
 
-### Lints and fixes files
-```
+# анализировать код и исправить ошибки
 npm run lint
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
