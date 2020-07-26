@@ -20,7 +20,7 @@ or
 
 copy tomcat to tomcatFront, change values:
 
-tomcat/conf/server.xml
+tomcatFront/conf/server.xml
 
 <Server port="8006" shutdown="SHUTDOWN">
 
