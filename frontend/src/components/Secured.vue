@@ -93,8 +93,12 @@ export default {
     },
     postData() {
       this.responseObj = {};
-      this.$axios
-        .post('http://localhost:8080/backend/secured/postdata')
+      this.$axios({
+        method: 'post',
+        url: 'http://localhost:8080/backend/secured/postdata',
+        headers: {}
+      })
+        // .post('http://localhost:8080/backend/secured/postdata')
         .then((response) => {
           console.log('Get response: ', response.data);
           this.responseObj = this.parseResponse(response);
