@@ -1,5 +1,6 @@
 package com.social.backend.service;
 
+import com.social.backend.entity.Roles;
 import com.social.backend.entity.Users;
 import com.social.backend.repository.UserRepository;
 import org.springframework.security.core.GrantedAuthority;
@@ -11,6 +12,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
 @Service
 public class UserDetailsServiceImpl implements UserDetailsService {
@@ -29,17 +31,17 @@ public class UserDetailsServiceImpl implements UserDetailsService {
             throw new UsernameNotFoundException("User " + username + " was not found in the database");
         }
         System.out.println("Found User: " + username);
-//        Set<Role> roleSet = user.getRoles();
+        Set<Roles> roleSet = user.getRoles();
         List<String> roleNames = new ArrayList<>();
-        if( user.getUsername().equals("admin") ){
-            roleNames.add("ADMIN");
-        }
-        if( user.getUsername().equals("user") ){
-            roleNames.add("USER");
-        }
-//        for(Role role : roleSet){
-//            roleNames.add(role.getName());
+//        if( user.getUsername().equals("admin") ){
+//            roleNames.add("ADMIN");
 //        }
+//        if( user.getUsername().equals("user") ){
+//            roleNames.add("USER");
+//        }
+        for(Roles role : roleSet){
+            roleNames.add(role.getName());
+        }
 
         List<GrantedAuthority> grantList = new ArrayList<>();
         if (null != roleNames){
