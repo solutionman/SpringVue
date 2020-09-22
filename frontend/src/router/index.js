@@ -11,22 +11,22 @@ const router = new Router({
   mode: 'history',
   routes: [
     {
-      path: '/',
-      redirect: '/home',
+      path: '/frontend/',
+      redirect: '/frontend/home',
     },
     {
-      path: '/home',
+      path: '/frontend/home',
       name: 'Home',
       component: Home,
       meta: { nonRequiresAuth: true },
     },
     {
-      path: '/secured',
+      path: '/frontend/secured',
       name: 'Secured',
       component: Secured,
     },
     {
-      path: '/signIn',
+      path: '/frontend/signIn',
       name: 'signIn',
       component: SignIn,
       meta: { loginPage: true, nonRequiresAuth: true },
@@ -43,9 +43,9 @@ router.beforeEach((to, from, next) => {
   const isLoginPage = to.matched.some((record) => record.meta.loginPage);
   const isAuthenticated = localStorage.getItem('auth');
   if (requiresAuth && !isAuthenticated) {
-    next('/signIn');
+    next('/frontend/signIn');
   } else if (isLoginPage && isAuthenticated) {
-    router.push('/home');
+    router.push('/frontend/home');
   }
   next();
 });

@@ -28,7 +28,7 @@ tomcatFront/conf/server.xml
            connectionTimeout="20000"
            redirectPort="8444" />
 
-WEB-INF with file web.xml to ROOT 
+WEB-INF with file web.xml to ROOT and front
 
 npm run build
 
@@ -36,7 +36,7 @@ cd distr
 
 all files to tomcatFront in (8081)
 
-webapps/ROOT
+webapps/front
 
 localhost:8081
 

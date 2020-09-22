@@ -7,7 +7,7 @@
     >
       <v-toolbar-title>
         <router-link
-          to="/home"
+          to="/frontend/home"
           tag="span"
           style="cursor: pointer"
         >
@@ -60,13 +60,13 @@ export default {
     menuItems() {
       if (this.isAuthenticated) {
         return [
-          { title: 'Home', path: '/home', icon: 'home' },
-          { title: 'Secured page', path: '/secured', icon: 'vpn_key' },
+          { title: 'Home', path: '/frontend/home', icon: 'home' },
+          { title: 'Secured page', path: '/frontend/secured', icon: 'vpn_key' },
         ];
       }
       return [
-        { title: 'Home', path: '/home', icon: 'home' },
-        { title: 'Sign In', path: '/signIn', icon: 'lock_open' },
+        { title: 'Home', path: '/frontend/home', icon: 'home' },
+        { title: 'Sign In', path: '/frontend/signIn', icon: 'lock_open' },
       ];
     },
   },

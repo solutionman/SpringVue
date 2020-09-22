@@ -5,7 +5,7 @@
 
     <h2>
       <router-link
-        to="/secured"
+        to="/frontend/secured"
         color="black"
       >
         Go to secured page
