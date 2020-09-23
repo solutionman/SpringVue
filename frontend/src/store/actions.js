@@ -15,7 +15,7 @@ const actions = {
         commit('setLoading', false);
         commit('setError', null);
         EventBus.$emit('authenticated', 'User authenticated');
-        router.push('/home');
+        router.push('/frontend/home');
       })
       .catch((error) => {
         commit('setError', error.message);
@@ -25,7 +25,7 @@ const actions = {
   userSignOut({ commit }) {
     commit('clearAuth');
     EventBus.$emit('authenticated', 'User not authenticated');
-    router.push('/signIn');
+    router.push('/frontend/signIn');
   },
 };
 
