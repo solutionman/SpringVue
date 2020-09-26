@@ -1,9 +1,17 @@
 
 cd backend/
 
+for jar version:
+
+mvn spring-boot:run
+or
+mvn clean install
+java -jar target/backend.jar
+
+for war version:
+
 mvn clean install
 
-java -jar target/backend.jar
 backend.war to tomcat
 
 localhost:8080/backend
