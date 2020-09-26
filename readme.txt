@@ -1,10 +1,10 @@
 
 cd backend/
 
+mvn spring-boot:run
+
 for jar version:
 
-mvn spring-boot:run
-or
 mvn clean install
 java -jar target/backend.jar
 
