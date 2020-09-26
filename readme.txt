@@ -3,6 +3,7 @@ cd backend/
 
 mvn clean install
 
+java -jar target/backend.jar
 backend.war to tomcat
 
 localhost:8080/backend
