@@ -4,12 +4,14 @@ import App from './App.vue';
 import router from './router';
 import store from './store';
 import vuetify from './plugins/vuetify';
+import VueCsrf from 'vue-csrf';
 
 axios.defaults.withCredentials = true;
 
 // Setting up Axios on Vue Instance, for use via this.$axios
 Vue.prototype.$axios = axios;
 Vue.config.productionTip = false;
+Vue.use(VueCsrf);
 
 axios.interceptors.response.use((response) => Promise.resolve(response),
   (error) => {
