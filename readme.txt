@@ -3,6 +3,20 @@ cd backend/
 
 mvn spring-boot:run
 
+new terminal
+
+cd frontend/
+
+npm run serve
+
+in browser: 
+localhost:8081/frontend
+user admin
+pass 12345678
+
+
+with exteran tomcats:
+
 for jar version:
 
 mvn clean install
