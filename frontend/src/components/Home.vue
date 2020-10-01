@@ -29,7 +29,7 @@ export default {
   methods: {
     getHomePageInformation() {
       this.$axios
-        .get('http://localhost:8080/test')
+        .get('http://localhost:8080/backend/test')
         .then((response) => {
           console.log('Get response: ', response.data);
           this.data = response.data;

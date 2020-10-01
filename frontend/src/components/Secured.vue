@@ -68,7 +68,7 @@ export default {
     getSecuredUserInformation() {
       this.responseObj = {};
       this.$axios
-        .get('http://localhost:8080/secured/welcome')
+        .get('http://localhost:8080/backend/secured/welcome')
         .then((response) => {
           console.log('Get response: ', response.data);
           this.responseObj = this.parseResponse(response);
@@ -81,7 +81,7 @@ export default {
     getSecuredAdminInformation() {
       this.responseObj = {};
       this.$axios
-        .get('http://localhost:8080/onlyforadmin/welcome')
+        .get('http://localhost:8080/backend/onlyforadmin/welcome')
         .then((response) => {
           console.log('Get response: ', response.data);
           this.responseObj = this.parseResponse(response);
@@ -95,7 +95,7 @@ export default {
       this.responseObj = {};
       this.$axios({
         method: 'post',
-        url: 'http://localhost:8080/secured/postdata',
+        url: 'http://localhost:8080/backend/secured/postdata',
         headers: {}
       })
         // .post('http://localhost:8080/backend/secured/postdata')
