@@ -11,7 +11,7 @@
   "dependencies": {
     "ajv": "6.12.2",
     "atob": "2.1.2",
-    "axios": "0.19.2",
+    "axios": "0.21.1",
     "vue": "2.6.11",
     "vue-csrf": "^2.0.4",
     "vue-router": "3.3.2",
