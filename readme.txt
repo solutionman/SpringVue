@@ -9,6 +9,7 @@ new terminal
 
 cd frontend/
 
+npm install
 npm run serve
 
 in browser: 
