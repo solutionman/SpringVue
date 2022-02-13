@@ -9,7 +9,7 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
-    "ajv": "6.12.2",
+    "ajv": "6.12.3",
     "atob": "2.1.2",
     "axios": "0.19.2",
     "vue": "2.6.11",
